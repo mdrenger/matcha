@@ -1,0 +1,57 @@
+
+
+
+
+ticket
+name
+local name
+
+Prices()
+
+Bedeutung:
+- timelimits
+- stations-allowed
+- vehicle-allowed (operator - type - id - name) 
+- valid-humans
+
+
+
+
+
+
+API:
+
+getAllTickets(location)
+
+ticket
+getMaxAdults()
+getMaxChildren()
+getTimeconstraints()
+getReachableStations()
+getUsableModes()
+getUsableVehicles(station) - strike
+IsOneRideTicket() 
+
+
+isValid(ticket,location, datetime, vehicle)
+hasValidForRide(stationA,stationB)
+
+
+consulting:
+bestTicketFor(TripProfile) 
+bestTicketsFor(TripProfile)
+
+
+---
+
+stations (location, namen, etc..) -> DB opendata 
+Modes
+
+
+VBB
+Einzelticket (AB, BC, ABC)
+Tagesticket (AB, ABC)
+Wochenticket(7 Tage, ABC)
+
+
+
