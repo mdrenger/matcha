@@ -1,0 +1,9 @@
+{
+  "name": "vbb-zones",
+  "version": "1.0.0",
+  "dependencies": {
+    "vbb-stations": "^5.2.0",
+    "@turf/inside": "^4.3.0",
+    "german-administrative-areas": "^0.1.0"
+  }
+}
