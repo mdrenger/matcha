@@ -15,7 +15,7 @@ def api_root():
 
 @app.route('/stations')
 def api_stations():
-    return json.dumps()
+    return json.dumps(stations)
 
 @app.route('/shape/<shape>')
 def api_shape(shape):
