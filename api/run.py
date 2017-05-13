@@ -18,6 +18,8 @@ def api_shape(shape):
     a=[]
     if shape == "A":
      a= json.load(open('data/shapeA.json'))
+    if shape == "AB":
+     a= json.load(open('data/shapeAB.json'))
     return json.dumps(a)
 
 
