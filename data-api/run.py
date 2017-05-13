@@ -28,6 +28,10 @@ def api_shape(shape):
      a= shapeAB
     return json.dumps(a)
 
+@app.route('/shapes')
+def api_shapes():
+    return json.dumps({ "VBB_A":shapeA, "VBB_B":shapeAB, "VBB_ABC":shapeABC, "VBB_BC":shapeBC })
+
 
 @app.route('/test')
 def api_test():
@@ -61,6 +65,8 @@ def api_getZoneForCoordinate(coords):
 if __name__ == '__main__':
     shapeA = json.load(open('data/shapeA.json'))
     shapeAB = json.load(open('data/shapeAB.json'))
+    shapeABC = json.load(open('data/shapeABC.json'))
+    shapeBC = json.load(open('data/shapeBC.json'))
     stations = json.load(open('data/stations.json'))
     
     for a in stations:
