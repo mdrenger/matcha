@@ -1,5 +1,7 @@
 import json
 
+from shapely.geometry import shape, Point
+
 from flask import Flask, url_for
 app = Flask(__name__)
 
@@ -40,7 +42,21 @@ def api_getZones():
 def api_getStationsByZone(z):
     return json.dumps(list(filter(lambda x: x['zone'] == z, stations)))
 
+@app.route('/getZoneForCoordinate/<coords>')
+def api_getZoneForCoordinate(coords):
+    lat, lon = coords.split(',')
+    lat = float(lat)
+    lon = float(lon)
+    point = Point(lon, lat)
+    polygonA = shape(shapeA)
+    polygonAB = shape(shapeAB)
 
+    if polygonA.contains(point):
+        return 'A'
+    elif polygonAB.contains(point):
+        return 'B'
+    else:
+        return 'C'
 
 if __name__ == '__main__':
     shapeA = json.load(open('data/shapeA.json'))
